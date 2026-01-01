@@ -1,15 +1,20 @@
+//STUDENT MANAGEMENT SYSTEM 
+//Author:Bhakkti gautam
+//Description:A menu-driven Student Management System written in C that allows adding, viewing, searching, and deleting student records using structures and functions.
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
 #include<math.h>
-int i=0;
+int i=0;//it keeps track of students
+//Structure to store student details
 struct studentsdetails{
         char firstname[50];
         char lastname[50];
         int studentid;
         float cpi;
-        int courseid[5];
-}studentdetails[55];
+        int courseid[5];//array to store course id
+}studentdetails[55];//array of structures
+//Function to add a new student
 void addstudent()
 {
         printf("\nADD STUDENT DETAILS :\n");
@@ -29,6 +34,7 @@ void addstudent()
 
         i=i+1;
 }
+//function to find a student and display it details by student id
 void findstudent()
 
 {
@@ -59,11 +65,13 @@ void findstudent()
 
 
 }
+//Function to display total students
 void totalstudents()
 {
         printf("TOTAL NUMBER OF STUDENTS =%d\n",i);
         printf("YOU CAN HAVE %d STUDENTS MORE\n",50-i);
 }
+//Function to delete a student 
 void deletestudent()
 {
         int found=0;
@@ -89,6 +97,7 @@ void deletestudent()
                 printf("ENTERED STUDENT ID DOESN'T EXIST");
         }
 }
+//Main function with menu-driven program
 int main()
 {
 
@@ -123,7 +132,8 @@ int main()
                 printf("INVALID CHOICE BY USER");
         }}
         while(1);
-return 0;
+return 0;//End of program
 }
                         
+
                        
